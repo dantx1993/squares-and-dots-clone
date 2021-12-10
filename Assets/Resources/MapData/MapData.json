@@ -1,0 +1,569 @@
+[
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 2,
+          "y": 5,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        },
+        "color": 1,
+        "direction": 3
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 4,
+          "y": 5,
+          "magnitude": 6.40312433,
+          "sqrMagnitude": 41
+        },
+        "color": 1,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 2,
+          "y": 4,
+          "magnitude": 4.472136,
+          "sqrMagnitude": 20
+        },
+        "color": 3,
+        "direction": 0
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 4,
+          "y": 4,
+          "magnitude": 5.656854,
+          "sqrMagnitude": 32
+        },
+        "color": 1,
+        "direction": 0
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 4,
+          "y": 5,
+          "magnitude": 6.40312433,
+          "sqrMagnitude": 41
+        },
+        "color": 1,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 5,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        },
+        "color": 3,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 5,
+          "magnitude": 5.83095169,
+          "sqrMagnitude": 34
+        },
+        "color": 3,
+        "direction": 0
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 8,
+          "magnitude": 8.54400349,
+          "sqrMagnitude": 73
+        },
+        "color": 2,
+        "direction": 1
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 6,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        },
+        "color": 3,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 7,
+          "magnitude": 7.615773,
+          "sqrMagnitude": 58
+        },
+        "color": 2,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 6,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        },
+        "color": 2,
+        "direction": 1
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 2,
+          "y": 7,
+          "magnitude": 7.28011,
+          "sqrMagnitude": 53
+        },
+        "color": 1,
+        "direction": 1
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 4,
+          "y": 5,
+          "magnitude": 6.40312433,
+          "sqrMagnitude": 41
+        },
+        "color": 3,
+        "direction": 2
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 5,
+          "magnitude": 5.83095169,
+          "sqrMagnitude": 34
+        },
+        "color": 2,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 5,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        },
+        "color": 3,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 4,
+          "magnitude": 4.472136,
+          "sqrMagnitude": 20
+        },
+        "color": 1,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 9,
+          "magnitude": 9.486833,
+          "sqrMagnitude": 90
+        },
+        "color": 2,
+        "direction": 1
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 5,
+          "y": 7,
+          "magnitude": 8.602325,
+          "sqrMagnitude": 74
+        },
+        "color": 3,
+        "direction": 2
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 4,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        },
+        "color": 2,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 1,
+          "y": 6,
+          "magnitude": 6.08276272,
+          "sqrMagnitude": 37
+        },
+        "color": 3,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 4,
+          "y": 8,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        },
+        "color": 3,
+        "direction": 1
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 5,
+          "y": 7,
+          "magnitude": 8.602325,
+          "sqrMagnitude": 74
+        },
+        "color": 1,
+        "direction": 2
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 7,
+          "magnitude": 7.615773,
+          "sqrMagnitude": 58
+        },
+        "color": 2,
+        "direction": 1
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 4,
+          "y": 7,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        },
+        "color": 3,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 6,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        },
+        "color": 2,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 5,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        },
+        "color": 1,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 5,
+          "y": 7,
+          "magnitude": 8.602325,
+          "sqrMagnitude": 74
+        },
+        "color": 2,
+        "direction": 2
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 7,
+          "magnitude": 7.615773,
+          "sqrMagnitude": 58
+        },
+        "color": 1,
+        "direction": 1
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 4,
+          "y": 8,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        },
+        "color": 3,
+        "direction": 1
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 5,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        },
+        "color": 1,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 6,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        },
+        "color": 2,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 4,
+          "y": 7,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        },
+        "color": 3,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 4,
+          "y": 8,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        },
+        "color": 2,
+        "direction": 1
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 5,
+          "y": 7,
+          "magnitude": 8.602325,
+          "sqrMagnitude": 74
+        },
+        "color": 3,
+        "direction": 2
+      },
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 3,
+          "y": 6,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        },
+        "color": 1,
+        "direction": 0
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 7,
+          "magnitude": 7.28011,
+          "sqrMagnitude": 53
+        },
+        "color": 3,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 1,
+          "y": 8,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        },
+        "color": 1,
+        "direction": 0
+      },
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 3,
+          "y": 5,
+          "magnitude": 5.83095169,
+          "sqrMagnitude": 34
+        },
+        "color": 2,
+        "direction": 0
+      }
+    ],
+    "directionObjects": []
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 4,
+          "y": 8,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        },
+        "color": 0,
+        "direction": 1
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 2,
+          "y": 6,
+          "magnitude": 6.3245554,
+          "sqrMagnitude": 40
+        },
+        "color": 0,
+        "direction": 0
+      }
+    ],
+    "directionObjects": [
+      {
+        "type": 2,
+        "gridPos": {
+          "x": 4,
+          "y": 6,
+          "magnitude": 7.21110249,
+          "sqrMagnitude": 52
+        },
+        "color": 0,
+        "direction": 2
+      }
+    ]
+  },
+  {
+    "squareObjects": [
+      {
+        "type": 0,
+        "gridPos": {
+          "x": 2,
+          "y": 8,
+          "magnitude": 8.246211,
+          "sqrMagnitude": 68
+        },
+        "color": 0,
+        "direction": 1
+      }
+    ],
+    "dotObjects": [
+      {
+        "type": 1,
+        "gridPos": {
+          "x": 4,
+          "y": 8,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        },
+        "color": 0,
+        "direction": 0
+      }
+    ],
+    "directionObjects": [
+      {
+        "type": 2,
+        "gridPos": {
+          "x": 2,
+          "y": 6,
+          "magnitude": 6.3245554,
+          "sqrMagnitude": 40
+        },
+        "color": 0,
+        "direction": 3
+      },
+      {
+        "type": 2,
+        "gridPos": {
+          "x": 4,
+          "y": 6,
+          "magnitude": 7.21110249,
+          "sqrMagnitude": 52
+        },
+        "color": 0,
+        "direction": 0
+      }
+    ]
+  }
+]

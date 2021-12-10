@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Collectible
+  - Square
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1125416585
+    locked: 0
+  - name: Player
+    uniqueID: 58423025
+    locked: 0
+  - name: Forceground
+    uniqueID: 70647061
     locked: 0
