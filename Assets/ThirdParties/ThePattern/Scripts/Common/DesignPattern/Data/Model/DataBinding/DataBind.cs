@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 
 namespace ThePattern
 {
+    [Serializable]
     public class DataBind<T> : IDataModel, ISerializable
     {
         #region Variables and Properties

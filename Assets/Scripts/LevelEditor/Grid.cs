@@ -7,13 +7,6 @@ namespace LevelEditor
 {
     public class Grid
     {
-        // public event EventHandler<OnGridValueChangedEventArgs> OnGridValueChanged;
-        // public class OnGridValueChangedEventArgs : EventArgs
-        // {
-        //     public int x;
-        //     public int y;
-        // }
-
         private Action<Vector2Int> _onGridValueChanged;
         private int _width;
         private int _height;

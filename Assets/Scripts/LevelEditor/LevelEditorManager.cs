@@ -16,10 +16,6 @@ namespace LevelEditor
         [SerializeField] private List<ColorDefine> _colorDefines;
 
         [Header("Grid Map")]
-        [SerializeField] private Transform _gridMapOriginalPoint;
-        [SerializeField] private int _gridMapWidth;
-        [SerializeField] private int _gridMapHeight;
-        [SerializeField] private float _cellSize;
         [SerializeField] private SpriteRenderer _gridPrefab;
         [SerializeField] private Transform _gridParent;
 
@@ -30,7 +26,11 @@ namespace LevelEditor
 
         // Private Variables
         private Mouse2DEventUtils _mouseUtils;
-        private Grid _gridMap;   
+        private int _gridMapWidth = GameConfig.GRID_WIDTH;
+        private int _gridMapHeight = GameConfig.GRID_HEIGHT;
+        private float _cellSize = GameConfig.GRID_CELLSIZE;
+        private Vector3 _gridOriginal = GameConfig.GridOriginal;
+        private Grid _gridMap;
         private MapObject _currentData;
         private List<MapData> _mapDatas;
         private MapData _currentMapData = new MapData();
@@ -71,8 +71,8 @@ namespace LevelEditor
             _squareObjectPrefab.CreatePool<SquareObject>(5);
             _dotObjectPrefab.CreatePool<DotObject>(5);
             _directionObjectPrefab.CreatePool<DirectionObject>(5);
-            _gridMapOriginalPoint.transform.position -= new Vector3(_cellSize, _cellSize, 0) * 0.5f;
-            _gridMap = new Grid(_gridMapWidth, _gridMapHeight, _cellSize, _gridMapOriginalPoint.transform.position);
+            _gridOriginal -= new Vector3(_cellSize, _cellSize, 0) * 0.5f;
+            _gridMap = new Grid(_gridMapWidth, _gridMapHeight, _cellSize, _gridOriginal);
             _gridMap.OnGridValuedChanged += OnGridChangedValue;
             GenerateGrid();
             CurrentIndex = 0;

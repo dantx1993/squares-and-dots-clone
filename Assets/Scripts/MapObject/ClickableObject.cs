@@ -43,13 +43,14 @@ public class ClickableObject : MonoBehaviour
 
     private void RaycastChoosable(Vector2 touchPosition)
     {
+        _raycastResults = new RaycastHit2D[2];
         _inputWorldPosition = MainCamera.ScreenToWorldPoint(touchPosition);
         _raycastResultCount = Physics2D.RaycastNonAlloc(_inputWorldPosition, Vector2.up, _raycastResults, 0.1f);
         if (_raycastResultCount > 0)
         {
             foreach (RaycastHit2D result in _raycastResults)
             {
-                if (result.transform.gameObject == this.gameObject)
+                if (result.transform != null && result.transform.gameObject == this.gameObject)
                 {
                     OnClickOnCharacter(_inputWorldPosition);
                     return;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using DG.Tweening;
+using ThePattern.Unity;
 
 public class SquareController : MonoBehaviour
 {
@@ -19,8 +20,14 @@ public class SquareController : MonoBehaviour
     private bool _isRightColor;
 
     // Properties:
+    public SquareConfig Config => _config;
+    public bool IsRightColor
+    {
+        get => _isRightColor;
+        set => _isRightColor = value;
+    }
     public float Size => _squareRenderer.size.x;
-    private EDirection Direction
+    public EDirection Direction
     {
         set
         {
@@ -28,16 +35,16 @@ public class SquareController : MonoBehaviour
             ChangeDirectionRenderer();
         }
     }
-
-    #region MonoBehaviour Method
-    private void Awake() 
+    public EColor Color
     {
-        _clickable.FitCollider(_squareRenderer);
-        _isRightColor = false;
-        ChangeDirectionRenderer();
-        ChangeColorRenderer();
+        set
+        {
+            _config.color = value;
+            ChangeColorRenderer();
+        }
     }
 
+    #region MonoBehaviour Method
     private void OnEnable() 
     {
         _clickable.OnCompleted += OnClick;
@@ -46,22 +53,58 @@ public class SquareController : MonoBehaviour
     private void OnDisable() 
     {
         _clickable.OnCompleted -= OnClick;
+        DOTween.KillAll();
+        StopAllCoroutines();
     }
     #endregion
+
+    public void Initialize(MapObject data, float cellSize)
+    {
+        Color = data.color;
+        Direction = data.direction;
+        float changedValue = cellSize / GameConfig.CREATED_CELL_SIZE;
+        _squareRenderer.size = new Vector2(GameConfig.CREATED_SQUARE_SIZE_XY * changedValue, GameConfig.CREATED_SQUARE_SIZE_XY * changedValue);
+        _arrow.size = new Vector2(GameConfig.CREATED_DIRECTION_SIZE_X * changedValue, GameConfig.CREATED_DIRECTION_SIZE_Y * changedValue);
+        _clickable.FitCollider(_squareRenderer);
+        _isRightColor = false;
+    }
 
     #region Player Input
     private void OnClick()
     {
+        if(GameManager.Instance.CurrentState.Value != EGameState.CHOSING) 
+        {
+            return;
+        }
+        Moving(_config.direction, true);
+    }
+    #endregion
+
+    public void Moving(EDirection direction, bool isSaveData = false)
+    {
+        SoundManager.Instance.PlaySFX("Move");
         GoOutObject();
-        this.transform.DOMove(this.transform.position + GetMoveDirection(_config.direction) * Size, 1f)
+        if(isSaveData)
+        {
+            GameManager.Instance.CurrentState.Value = EGameState.MOVING;
+            MapManager.Instance.AddCurrentMove();
+        }
+        _checking.CheckingPushSquare(direction);
+        this.transform.DOMove(this.transform.position + MapManager.Instance.GetMoveDirection(direction) * Size, 1f)
             .SetEase(Ease.Linear)
             .OnComplete(() =>
             {
-                Debug.Log($"{this.gameObject.name} completed move");
+                if (isSaveData)
+                {
+                    this.ActionWaitForEndOfFrame(() =>
+                    {
+                        GameManager.Instance.CurrentState.Value = EGameState.CHOSING;
+                    });
+                }
                 _checking.Checking(OnCollisionWithDot, OnCollisionWithDirection);
+                Debug.Log("Move completed");
             });
     }
-    #endregion
 
     #region Renderer
     private void ChangeDirectionRenderer()
@@ -74,34 +117,17 @@ public class SquareController : MonoBehaviour
     }
     #endregion
 
-    #region Move
-    private Vector3 GetMoveDirection(EDirection direction)
-    {
-        Vector3 result = new Vector3(1, 0, 0);
-        switch (direction)
-        {
-            case EDirection.UP:
-                result = new Vector3(0, 1, 0);
-                break;
-            case EDirection.DOWN:
-                result = new Vector3(0, -1, 0);
-                break;
-            case EDirection.LEFT:
-                result = new Vector3(-1, 0, 0);
-                break;
-            case EDirection.RIGHT:
-                result = new Vector3(1, 0, 0);
-                break;
-        }
-        return result;
-    }
-    #endregion
-
     #region Collision
     private void OnCollisionWithDot(EColor color)
     {
+        
         _isRightColor = color == _config.color;
-        Debug.Log($"Right color: {_isRightColor}");
+        if(_isRightColor)
+        {
+            SoundManager.Instance.PlaySFX("OnPosition");
+        }
+        if(GameManager.Instance.CurrentState.Value != EGameState.FINISHING)
+            MapManager.Instance.CheckForNextLevel();
     }
     private void OnCollisionWithDirection(EDirection direction)
     {

@@ -8,30 +8,26 @@ public class DirectionController : MonoBehaviour
     [SerializeField] private GameObject _arrow;
     public DirectionConfig Config => _config;
 
-
-    private void Awake() 
+    public EDirection Direction
     {
-        ChangeDirectionRenderer(_arrow.transform, _config.direction);
-    }
-
-    private void ChangeDirectionRenderer(Transform arrow, EDirection direction)
-    {
-        Vector3 eulerAngles = Vector3.zero;
-        switch (direction)
+        set
         {
-            case EDirection.UP:
-                eulerAngles = new Vector3(0, 0, 180);
-                break;
-            case EDirection.DOWN:
-                eulerAngles = Vector3.zero;
-                break;
-            case EDirection.LEFT:
-                eulerAngles = new Vector3(0, 0, 270);
-                break;
-            case EDirection.RIGHT:
-                eulerAngles = new Vector3(0, 0, 90);
-                break;
+            _config.direction = value;
+            ChangeDirectionRenderer();
         }
-        arrow.localEulerAngles = eulerAngles;
     }
+
+    public void Initialize(MapObject data, float cellSize)
+    {
+        Direction = data.direction;
+        float changedValue = cellSize / GameConfig.CREATED_CELL_SIZE;
+        _arrow.GetComponent<SpriteRenderer>().size = new Vector2(GameConfig.CREATED_DIRECTION_SIZE_X * changedValue, GameConfig.CREATED_DIRECTION_SIZE_Y * changedValue);
+    }
+
+    #region Renderer
+    private void ChangeDirectionRenderer()
+    {
+        _arrow.transform.localEulerAngles = MapManager.Instance.GetEulerAnglesByType(_config.direction);
+    }
+    #endregion
 }

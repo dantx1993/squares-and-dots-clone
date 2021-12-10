@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6166221013769109513}
   - component: {fileID: 6166221013769109514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6166221014078437231}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6166221015219176026}
   - component: {fileID: 6166221015219176025}
   - component: {fileID: 6166221015219176004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
     direction: 0
     color: 1
   _squareRenderer: {fileID: 6166221013769109514}
-  _arrow: {fileID: 6166221015264924060}
+  _arrow: {fileID: 6166221015264924061}
   _clickable: {fileID: 6166221015219176026}
   _checking: {fileID: 6166221015219176004}
 --- !u!114 &6166221015219176026
@@ -221,6 +221,9 @@ MonoBehaviour:
   _collectibleLayer:
     serializedVersion: 2
     m_Bits: 256
+  _squareLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &6166221015264924051
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6166221015264924060}
   - component: {fileID: 6166221015264924061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
