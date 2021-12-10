@@ -3,8 +3,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+using ThePattern.Attributes;
+
 namespace ThePattern.Unity
 {
+    [Resource("", false)]
     public sealed class ObjectPool : Singleton<ObjectPool>
     {
         public enum StartupPoolMode

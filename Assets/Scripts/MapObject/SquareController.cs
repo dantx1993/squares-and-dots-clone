@@ -66,23 +66,7 @@ public class SquareController : MonoBehaviour
     #region Renderer
     private void ChangeDirectionRenderer()
     {
-        Vector3 eulerAngles = Vector3.zero;
-        switch (_config.direction)
-        {
-            case EDirection.UP:
-                eulerAngles = new Vector3(0, 0, 180);
-                break;
-            case EDirection.DOWN:
-                eulerAngles = Vector3.zero;
-                break;
-            case EDirection.LEFT:
-                eulerAngles = new Vector3(0, 0, 270);
-                break;
-            case EDirection.RIGHT:
-                eulerAngles = new Vector3(0, 0, 90);
-                break;
-        }
-        _arrow.transform.localEulerAngles = eulerAngles;
+        _arrow.transform.localEulerAngles = MapManager.Instance.GetEulerAnglesByType(_config.direction);
     }
     private void ChangeColorRenderer()
     {

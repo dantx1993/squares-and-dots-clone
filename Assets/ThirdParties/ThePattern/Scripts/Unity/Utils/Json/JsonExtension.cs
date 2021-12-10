@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using LitJson;
+using Newtonsoft.Json;
 
 namespace ThePattern.Json
 {
@@ -10,21 +10,19 @@ namespace ThePattern.Json
     {
         public static string ToJson(this object data)
         {
-            JsonMapper.RegisterExporter<float>((obj, writer) => writer.Write(Convert.ToDouble(obj)));
-            string jsonData = JsonMapper.ToJson(data);
+            string jsonData = JsonConvert.SerializeObject(data);
             return jsonData;
         }
 
         public static string ToJsonFormat(this object data)
         {
-            string jsonData = ToJson(data);
-            return FormatJson(jsonData);
+            string jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);
+            return jsonData;
         }
 
         public static T ToObject<T>(this string jsonData)
         {
-            JsonMapper.RegisterImporter<double, float>(input => Convert.ToSingle(input));
-            T data = JsonMapper.ToObject<T>(jsonData);
+            T data = JsonConvert.DeserializeObject<T>(jsonData);
             return data;
         }
 
